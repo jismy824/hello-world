@@ -1,0 +1,15 @@
+
+course-card
+{
+    display : block;
+}
+course-card.is-first
+{
+    border-top: 2px solid-grey;
+    padding-top:    20px;
+}
+app-course-card.is-last
+{
+    border-top: 2px solid-grey;
+    padding-top:    20px;
+}

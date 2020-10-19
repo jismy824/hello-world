@@ -1,0 +1,19 @@
+<div>
+  {{ sdate | date : ('MMM/dd/yyyy') }}
+  {{ num | currency : 'EUR' }}
+  {{ tit | titlecase }}
+  {{ rat | percent }}
+  <div *ngFor="let p of course1 | keyvalue">
+    {{ p.key + ":" + p.value }}
+  </div>
+  <div> {{ course | json }} </div>
+  <app-course-card *ngFor="let c of course | slice : 0:3; index as i; first as isFirst"
+  
+          [class.is-first]="true"
+          [course]="c" (onCourseclick)="OnAppClicked($event)" [indx]="i+1"></app-course-card>
+  
+  <!-- <app-course-card [course]="course1" (onCourseclick)="OnAppClicked($event)"></app-course-card>
+  <app-course-card [course]="course2" (onCourseclick)="OnAppClicked($event)"></app-course-card>
+  <app-course-card [course]="course3" (onCourseclick)="OnAppClicked($event)"></app-course-card>
+  <app-course-card [course]="course4" (onCourseclick)="OnAppClicked($event)"></app-course-card> -->
+</div>
